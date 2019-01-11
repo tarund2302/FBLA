@@ -64,7 +64,7 @@ public class MyUI extends UI {
     private HomeDesign home = new HomeDesign();
     private HorizontalSplitPanel eBookSplitPanel = new HorizontalSplitPanel();
     private HorizontalSplitPanel studentSplitPanel = new HorizontalSplitPanel();
-    private SQL sql = new SQL();
+    //private SQL sql = new SQL();
     private TabSheet tabSheet = new TabSheet();
     private String p, u;
     private Grid<Student> studentGrid = new Grid<>(Student.class);
@@ -73,41 +73,42 @@ public class MyUI extends UI {
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        initializeSQL();
-        sign.signinButton.addClickListener((Button.ClickListener) clickEvent ->{
+        //initializeSQL();
+/*        sign.signinButton.addClickListener((Button.ClickListener) clickEvent ->{
             p = sign.passwordField.getValue();
             u = sign.username.getValue();
             if(sign.isCred(u,p)){
-                tabSheet.setSizeFull();
-                sign.setVisible(false);
-                studentEditor.refresh();
-                eBookEditor.refresh();
-                createStudentPanel();
-                createEBookPanel();
-                createSplitPanels();
-                home.setCaption("Home");
-                eBookGrid.setCaption("E-Books");
-                helpView.setCaption("Help");
-                tabSheet.addComponent(home);
-                tabSheet.addComponent(studentSplitPanel);
-                tabSheet.addComponent(eBookSplitPanel);
-                tabSheet.addComponent(eBookGrid);
-                tabSheet.addComponent(helpView);
-                helpView.setSizeFull();
-                tabSheet.addSelectedTabChangeListener(selectedTabChangeEvent -> {
-                    if (selectedTabChangeEvent.getComponent() == helpView) {
-                        System.out.println();
-                        System.out.println("Got Here");
-                        new Notification("Hello", Notification.Type.TRAY_NOTIFICATION).show(Page.getCurrent());
-                    }
-                });
-                setContent(tabSheet);
+
             }
             else{
                 sign.signInError.setVisible(true);
             }
 
+        });*/
+        tabSheet.setSizeFull();
+        sign.setVisible(false);
+/*        studentEditor.refresh();
+        eBookEditor.refresh();*/
+        createStudentPanel();
+        createEBookPanel();
+        createSplitPanels();
+        home.setCaption("Home");
+        eBookGrid.setCaption("E-Books");
+        helpView.setCaption("Help");
+        tabSheet.addComponent(home);
+        tabSheet.addComponent(studentSplitPanel);
+        tabSheet.addComponent(eBookSplitPanel);
+        tabSheet.addComponent(eBookGrid);
+        tabSheet.addComponent(helpView);
+        helpView.setSizeFull();
+        tabSheet.addSelectedTabChangeListener(selectedTabChangeEvent -> {
+            if (selectedTabChangeEvent.getComponent() == helpView) {
+                System.out.println();
+                System.out.println("Got Here");
+                new Notification("Hello", Notification.Type.TRAY_NOTIFICATION).show(Page.getCurrent());
+            }
         });
+        setContent(tabSheet);
     }
 
     private void createSplitPanels (){
@@ -125,9 +126,9 @@ public class MyUI extends UI {
         studentEditor.setGrid(studentGrid);
         eBookEditor.setGrid(eBookGrid);
         eBookEditor.setStudentFormView(studentEditor);
-        sql.connect(SQL.Database.EBOOK);
-        eBookEditor.setSql(sql);
-        studentEditor.setSQL(sql);
+        //sql.connect(SQL.Database.EBOOK);
+        //eBookEditor.setSql(sql);
+        //studentEditor.setSQL(sql);
         setContent(sign);
     }
 

@@ -24,7 +24,19 @@ public class StudentForm extends HorizontalLayout {
     public Label nSave;
 
 
-    public StudentForm() {
-        Design.read(this);
-    }
+    public StudentForm(){
+        firstName = new TextField();
+        lastName = new TextField();
+        grade = new TextField();
+        classRoom = new TextField();
+        studentId = new TextField();
+        delete = new Button();
+        save = new Button();
+        cancel = new Button();
+        add = new Button();
+        nSave = new Label();
+        //Design.read(this);}
+}
+
+
 }

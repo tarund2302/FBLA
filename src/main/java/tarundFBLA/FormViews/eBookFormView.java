@@ -5,6 +5,7 @@ import com.vaadin.server.Page;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.Notification;
+import com.vaadin.ui.TextField;
 import tarundFBLA.Forms.eBookForm;
 import tarundFBLA.Models.eBook;
 import tarundFBLA.SQL;
@@ -21,6 +22,7 @@ public class eBookFormView extends eBookForm {
     //  private SQL.E
     private Grid<eBook> grid;
     public eBookFormView(){
+       // System.out.println(cancel);
         cancel.setComponentError(null);
         id.setVisible(false);
         binder.forField(this.id)

@@ -14,4 +14,14 @@ public class SignInForm extends AbsoluteLayout {
     public Label passwordLabel;
     public Label signInError;
 
+    public SignInForm(){
+        signinButton = new Button();
+        passwordField = new PasswordField();
+        username = new TextField();
+        welcomeLabel = new Label();
+        usernameLabel = new Label();
+        passwordLabel = new Label();
+        signInError = new Label();
+    }
+
 }

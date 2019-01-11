@@ -19,4 +19,17 @@ public class eBookForm  extends HorizontalLayout {
     public Button add;
     /*    public Button returnBook;*/
 
+    public eBookForm(){
+        layout = new FormLayout();
+        cancel = new Button();
+        delete = new Button();
+        save = new Button();
+        add = new Button();
+        id = new TextField();
+        author = new TextField();
+        bookName = new TextField();
+        redemptionCode = new TextField();
+        studentId = new TextField();
+    }
+
 }

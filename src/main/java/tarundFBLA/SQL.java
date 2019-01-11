@@ -41,9 +41,11 @@ public class SQL {
     public void connect (Database d){
         try {Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");}
         catch (ClassNotFoundException e){
+            System.out.println("Failure!");
             e.printStackTrace();
             return;
         }
+        /*com.microsoft.sqlserver.jdbc.SQLServerDriver*/
         try {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost;database=eBookIssuance" + d.database, "tarundFBLA", "t03212003");
         }

@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentFormView extends StudentForm{
-    private static SQL sql;
+    private static SQL sql = new SQL();
     private Binder<Student> binder = new Binder<>(Student.class);
-    private Grid<Student> grid;
+    private Grid<Student> grid = new Grid<>();
     private boolean addPressed = false;
     public StudentFormView(){
         binder.forField (this.firstName)
@@ -115,9 +115,8 @@ public class StudentFormView extends StudentForm{
     public void refresh() {
         List<Student> students = new ArrayList<>();
         int loopIteration = 0;
-        String status;
+
         while (loopIteration < sql.getList(SQL.Table.STUDENT, "id").size()) {
-            status = "STUDENT";
             students.add(new Student(sql.getList(SQL.Table.STUDENT, "firstName").get(loopIteration).toString(),
                     sql.getList(SQL.Table.STUDENT, "lastName").get(loopIteration).toString(),
                     sql.getList(SQL.Table.STUDENT, "grade").get(loopIteration).toString(),
@@ -126,7 +125,6 @@ public class StudentFormView extends StudentForm{
             loopIteration++;
         }
         grid.setItems(students);
-        students = null;
     }
 
 

@@ -14,6 +14,15 @@ public class HelpForm extends AbsoluteLayout {
     protected Button report;
     protected Label desc;
 
+/*    public HelpForm(){
+        Design.read(this);}*/
+
     public HelpForm(){
-        Design.read(this);}
+        student = new Button();
+        eBook = new Button();
+        report = new Button();
+        desc = new Label();
+        //Design.read(this);
+    }
+
 }

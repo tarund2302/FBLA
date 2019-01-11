@@ -8,5 +8,5 @@ import com.vaadin.ui.declarative.Design;
 @SuppressWarnings("serial")
 public class HomeDesign extends AbsoluteLayout {
 
-    public HomeDesign(){ Design.read(this);}
+    public HomeDesign(){ /*Design.read(this);*/}
 }
