@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="eBookIssuance@localhost">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.14">
+    <root id="1">
+      <ServerVersion>11.0.2100</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="Customer">
+      <ObjectId>6</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="3" parent="1" name="EBookIssuance">
+      <ObjectId>7</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="4" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="5" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="6" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="7" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="8" parent="1" name="test">
+      <ObjectId>5</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <schema id="9" parent="3" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="10" parent="3" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="11" parent="3" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="12" parent="3" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="13" parent="3" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="14" parent="3" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="15" parent="3" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="16" parent="3" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="17" parent="3" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="18" parent="3" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="19" parent="3" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2019-01-09.18:17:58.960</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="20" parent="3" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="21" parent="3" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <table id="22" parent="19" name="EBookCode">
+      <ObjectId>261575970</ObjectId>
+      <CreatedTimestamp>2018-12-28.19:25:28.253</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.13:50:32.807</ModifiedTimestamp>
+    </table>
+    <table id="23" parent="19" name="StudentInfo">
+      <ObjectId>245575913</ObjectId>
+      <CreatedTimestamp>2018-12-28.19:14:29.500</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.13:50:32.747</ModifiedTimestamp>
+    </table>
+    <column id="24" parent="22" name="RedemptionCode">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="22" name="Id">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="26" parent="22" name="BookName">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="27" parent="22" name="Author">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="28" parent="22" name="PK__EBookCod__C7E548CAD96CA8D9">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RedemptionCode</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="22" name="PK__EBookCod__C7E548CAD96CA8D9">
+      <ObjectId>277576027</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-12-28.19:25:28.393</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-28.19:25:28.393</ModifiedTimestamp>
+      <ColNames>RedemptionCode</ColNames>
+      <UnderlyingIndexName>PK__EBookCod__C7E548CAD96CA8D9</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="23" name="FirstName">
+      <Position>1</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="31" parent="23" name="LastName">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="32" parent="23" name="Grade">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="33" parent="23" name="ClassRoom">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="34" parent="23" name="id">
+      <Position>5</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="23" name="redemptionCode">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="36" parent="23" name="PK__StudentI__3213E83F09126FC9">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="23" name="PK__StudentI__3213E83F09126FC9">
+      <ObjectId>565577053</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2019-01-06.18:12:20.180</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-06.18:12:20.180</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__StudentI__3213E83F09126FC9</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="23" name="FK__StudentIn__redem__34C8D9D1">
+      <ObjectId>885578193</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2019-01-08.13:50:32.747</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.13:50:32.747</ModifiedTimestamp>
+      <ColNames>redemptionCode</ColNames>
+      <RefTableId>261575970</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>EBookCode</RefTableName>
+      <RefKeyName>PK__EBookCod__C7E548CAD96CA8D9</RefKeyName>
+      <RefColNames>RedemptionCode</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
