@@ -73,8 +73,8 @@ public class MyUI extends UI {
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        //initializeSQL();
-/*        sign.signinButton.addClickListener((Button.ClickListener) clickEvent ->{
+/*        //initializeSQL();
+       sign.signinButton.addClickListener((Button.ClickListener) clickEvent ->{
             p = sign.passwordField.getValue();
             u = sign.username.getValue();
             if(sign.isCred(u,p)){
@@ -85,8 +85,9 @@ public class MyUI extends UI {
             }
 
         });*/
+        initializeSQL();
         tabSheet.setSizeFull();
-        sign.setVisible(false);
+        sign.setVisible(true);
 /*        studentEditor.refresh();
         eBookEditor.refresh();*/
         createStudentPanel();
@@ -146,9 +147,9 @@ public class MyUI extends UI {
         studentGrid.addSelectionListener(event -> {
             studentEditor.delete.setVisible(true);
             studentEditor.cancel.setVisible(true);
-            studentEditor.add.setVisible(false);
-            studentEditor.firstName.setReadOnly(false);
-            studentEditor.lastName.setReadOnly(false);
+            studentEditor.add.setVisible(true);
+            studentEditor.firstName.setReadOnly(true);
+            studentEditor.lastName.setReadOnly(true);
         });
     }
 
